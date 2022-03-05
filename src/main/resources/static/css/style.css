@@ -1,0 +1,120 @@
+body {
+    background-color: black;
+}
+
+.container-logo {
+    margin: 0;
+    padding: 10px 30px;
+    background-color: yellow;
+    font-size: 0;
+}
+
+.container-logo img {
+    height: 50px;
+}
+
+h2, li, a {
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2 {
+    margin: 0;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 8px 0;
+    transition: all 0.3s;
+}
+
+li:hover {
+    border-left: solid 10px yellow;
+    padding-left: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2:hover a, li:hover a {
+    text-decoration: underline;
+    text-decoration-color: yellow;
+}
+
+.index, .doctors {
+    margin: 0;
+    padding: 0;
+}
+
+.index {
+    background-image: url("/img/thirteen_doctors.jpg");
+    background-size: cover;
+}
+
+.index nav {
+    display: grid;
+    grid-template-columns: 8fr repeat(9, 7fr) repeat(3, 8fr) 10fr;
+    width: 100%;
+    position: absolute;
+    bottom: 100px;
+    text-align: center;
+}
+
+.index nav a {
+    transition: all 0.3s;
+}
+
+.index nav a:hover {
+    border-left: solid 10px yellow;
+}
+
+.doctors main {
+    display: flex;
+    flex-direction: row;
+}
+
+.doctors aside {
+    margin: 0;
+    padding: 0;
+    width: 300px;
+}
+
+.card_doctor a {
+    margin-left: 350px;
+    padding: 10px;
+    width: 200px;
+    border-radius: 50px;
+    background-color: yellow;
+    color: black;
+    transition: all 0.3s;
+}
+
+.card_doctor a:hover {
+    box-shadow: 0 0 5px 5px white;
+}
+
+.picture-frame {
+    position: relative;
+    overflow: hidden;
+    margin: 50px;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px white;
+}
+
+.picture-frame img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+}

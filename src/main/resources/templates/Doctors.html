@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body class="doctors">
+    <h1 class="container-logo">
+        <img src="/img/logo_doctor_who.png">
+    </h1>
+    <main>
+        <aside>
+            <h2><a href="/">Retour à l'accueil</a></h2>
+            <ul class="doctors_list">
+                <li th:each="doctor: ${doctors}">
+                    <a th:href="@{'/doctors/' + ${doctor.id}}">
+                        <span th:text="${doctor.id}"></span> - <span th:text="${doctor.name}"></span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <div th:each="doctor: ${doctors}">
+            <div th:if="${doctor.id} == ${id}" class="card_doctor">
+                <div>
+                    <h2>
+                        <span>Doctor n°</span><span th:text="${doctor.id}"></span> - <span th:text="${doctor.name}"></span>
+                    </h2>
+                    <a th:href="${doctor.wikipediaLink}" target="_blank">Lien wikipédia</a>
+                </div>
+                <div class="picture-frame">
+                    <img th:src="@{'/img/' + ${doctor.poster}}" src="">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
